@@ -8,6 +8,7 @@
 }
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 body {
   font-family: "Titillium Web", sans-serif;
@@ -255,4 +256,87 @@ ul.main-nav > li.active > a {
   color: #fff;
   transform: rotate(360deg);
   background: #3c4761;
+}
+/*==============================
+##  SKILLS SECTION
+================================*/
+.skills-section {
+  color: #fff;
+  text-align: center;
+  background: linear-gradient(rgb(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)),
+    url(./img/skill-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.skills-section h2 {
+  color: #3c4761;
+}
+.skills-section p {
+  color: #3c4761;
+}
+/*** RADIAL PROGRESS ***/
+/* Circumference = 2πr */
+/* π = 3.1415926535898 */
+/* r = 35 */
+
+svg.radial-progress {
+  height: auto;
+  max-width: 200px;
+  padding: 1em;
+  transform: rotate(-90deg);
+  width: 100%;
+}
+
+svg.radial-progress circle {
+  fill: rgba(189, 172, 172, 0);
+  stroke: rgb(143, 46, 46);
+  stroke-dashoffset: 219.91148575129; /* Circumference */
+  stroke-width: 10;
+}
+
+svg.radial-progress circle.incomplete {
+  opacity: 0.25;
+}
+
+svg.radial-progress circle.complete {
+  stroke-dasharray: 219.91148575129; /* Circumference */
+}
+
+svg.radial-progress text {
+  fill: rgb(29, 28, 28);
+  font: 400 1em/1 "Oswald", sans-serif;
+  text-anchor: middle;
+}
+
+/*** COLORS ***/
+/* Primary */
+
+svg.radial-progress:nth-of-type(6n + 1) circle {
+  stroke: #a2ed56;
+}
+
+/* Secondary */
+
+svg.radial-progress:nth-of-type(6n + 2) circle {
+  stroke: #83e4e2;
+}
+
+/* Tertiary */
+
+svg.radial-progress:nth-of-type(6n + 3) circle {
+  stroke: #fd6470;
+}
+
+/* Quaternary */
+
+svg.radial-progress:nth-of-type(6n + 4) circle {
+  stroke: #fca858;
+}
+
+/* Quinary */
+
+svg.radial-progress:nth-of-type(6n + 5) circle {
+  stroke: #fddc32;
 }
