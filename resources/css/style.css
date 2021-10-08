@@ -7,10 +7,12 @@
   box-sizing: border-box;
 }
 html {
-  font-size: 62.5rem;
+  font-size: 62.5%;
 }
 body {
   font-family: "Titillium Web", sans-serif;
+  text-rendering: optimizeLegibility;
+  line-height: 1.4rem;
 }
 /*==============================
 ## HEADING 
@@ -18,12 +20,19 @@ body {
 h1 {
   font-size: 4.2rem;
   color: #fff;
+  line-height: normal;
 }
 ul,
 li {
   list-style-type: none;
 }
-
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
 /*==============================
 ## REUSEABLE COMPONENT
 ================================*/
@@ -31,7 +40,49 @@ li {
   max-width: 114rem;
   margin: 0 auto;
 }
-
+section {
+  padding: 8rem 0;
+}
+h2 {
+  font-size: 4rem;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+  font-weight: 600;
+  margin: 0 0 2rem 0;
+  color: #fff;
+}
+h2::after {
+  content: "";
+  display: block;
+  height: 0.3rem;
+  width: 8.5rem;
+  margin: auto;
+  margin-top: 2rem;
+  background: #fff;
+}
+/* Little Description - Praghraph*/
+.little-description {
+  font-size: 1.8rem;
+  line-height: 3rem;
+  width: 60%;
+  margin-left: 20%;
+}
+h3 {
+  color: #fff;
+  font-size: 2.4rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.box {
+  padding: 1%;
+}
+.box > p {
+  font-size: 1.6rem;
+  font-weight: 300;
+  line-height: normal;
+  margin-top: 2rem;
+}
 /* BUTTON */
 .btn:link,
 .btn:visited,
@@ -57,6 +108,7 @@ header {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
+  background-attachment: fixed;
   height: 85vh;
   position: relative;
 }
@@ -101,6 +153,7 @@ ul.main-nav > li.active > a {
   position: absolute;
   top: 50%;
   left: 50%;
+  width: 110rem;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   text-align: center;
@@ -109,4 +162,97 @@ ul.main-nav > li.active > a {
 .btn-hero:visited {
   background: #eb7d4b;
   border-color: #c86a40;
+}
+
+/*==============================
+##  SERVICES SECTION
+================================*/
+.services-section {
+  color: #fff;
+  text-align: center;
+  /* background-color: #17c2a4; */
+  background: linear-gradient(rgb(23, 194, 164, 0.8), rgba(23, 194, 164, 0.8)),
+    url(./img/services-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+}
+.services-section > h2::after {
+  background-color: #14a58c;
+}
+.services-section img.services-icon {
+  height: 12rem;
+  margin: 4.5rem 0 3.5rem;
+}
+
+/*==============================
+##  TEAM MEMBER SECTION
+================================*/
+.teams-section {
+  color: #fff;
+  text-align: center;
+  background: linear-gradient(rgb(231, 241, 248, 0.8), rgba(231, 241, 248, 0.8)),
+    url(./img/team-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.teams-section h2 {
+  color: #3c4761;
+}
+.teams-section h2::after {
+  background: #c8d9e5;
+}
+.teams-section p {
+  color: #3c4761;
+}
+.team-members {
+  margin: 4.5rem 0 3.5rem;
+  height: 20rem;
+  width: 20rem;
+  border-radius: 50%;
+}
+.teams-section h3 {
+  color: #27283d;
+}
+.teams-section span.role {
+  color: #30bab6;
+  margin-top: 1.2rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+  text-transform: capitalize;
+  display: inline-block;
+}
+.teams-section .box p {
+  color: #3c4761;
+}
+
+.teams-section .social-link {
+  margin-top: 4.5rem;
+}
+.teams-section .social-link li {
+  display: inline-block;
+  margin: 0.5rem;
+}
+.social-link li a:link {
+  color: #fff;
+}
+.social-link ul li a {
+  width: 3rem;
+  height: 3rem;
+  display: block;
+  border-radius: 50%;
+  font-size: 1.4rem;
+  color: #fff;
+  background: #bdd1df;
+  padding: 0;
+  line-height: 3rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+.social-link ul li:hover a {
+  color: #fff;
+  transform: rotate(360deg);
+  background: #3c4761;
 }
