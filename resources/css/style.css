@@ -12,6 +12,7 @@ html {
 }
 body {
   font-family: "Titillium Web", sans-serif;
+  font-size: 1.6rem;
   text-rendering: optimizeLegibility;
   line-height: 1.4rem;
 }
@@ -41,7 +42,8 @@ li {
   max-width: 114rem;
   margin: 0 auto;
 }
-section {
+section,
+footer {
   padding: 8rem 0;
 }
 h2 {
@@ -73,6 +75,13 @@ h3 {
   color: #fff;
   font-size: 2.4rem;
   font-weight: 600;
+  text-transform: uppercase;
+}
+h4 {
+  color: #393939;
+  font-size: 1.8rem;
+  font-weight: 400;
+  margin-top: 2.5rem;
   text-transform: uppercase;
 }
 .box {
@@ -261,7 +270,7 @@ ul.main-nav > li.active > a {
 ##  SKILLS SECTION
 ================================*/
 .skills-section {
-  color: #fff;
+  color: #3c4761;
   text-align: center;
   background: linear-gradient(rgb(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)),
     url(./img/skill-bg.jpg);
@@ -270,12 +279,20 @@ ul.main-nav > li.active > a {
   background-size: cover;
   background-attachment: fixed;
 }
+.skills-section .box {
+  margin-top: 4.5rem;
+}
 .skills-section h2 {
   color: #3c4761;
 }
 .skills-section p {
   color: #3c4761;
 }
+.skills-section h3 {
+  color: #3c4761;
+  margin-top: 1.5rem;
+}
+
 /*** RADIAL PROGRESS ***/
 /* Circumference = 2πr */
 /* π = 3.1415926535898 */
@@ -291,9 +308,22 @@ svg.radial-progress {
 
 svg.radial-progress circle {
   fill: rgba(189, 172, 172, 0);
-  stroke: rgb(143, 46, 46);
+  /* stroke: rgb(143, 46, 46); */
   stroke-dashoffset: 219.91148575129; /* Circumference */
-  stroke-width: 10;
+  stroke-width: 6;
+}
+svg.web-design circle {
+  stroke: #30bae7;
+}
+svg.html-css circle {
+  stroke: #d74680;
+}
+
+svg.graphic circle {
+  stroke: #15c7a8;
+}
+svg.ui-ux circle {
+  stroke: #eb7d4b;
 }
 
 svg.radial-progress circle.incomplete {
@@ -305,38 +335,196 @@ svg.radial-progress circle.complete {
 }
 
 svg.radial-progress text {
-  fill: rgb(29, 28, 28);
-  font: 400 1em/1 "Oswald", sans-serif;
+  fill: #3c4761;
+  font: 5rem;
   text-anchor: middle;
 }
 
-/*** COLORS ***/
-/* Primary */
-
-svg.radial-progress:nth-of-type(6n + 1) circle {
-  stroke: #a2ed56;
+/*==============================
+##  PORTFOLIO SECTION
+================================*/
+.portfolio-section {
+  color: #393939;
+  text-align: center;
+  background: linear-gradient(rgb(255, 221, 153, 0.8), rgba(255, 221, 153, 0.8)),
+    url(./img/portfolio-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.portfolio-section h2 {
+  color: #393939;
+}
+.portfolio-section h2::after {
+  background-color: #e5c37f;
+}
+.portfolio-section .filter-menu {
+  margin: 4.5rem 0;
+}
+.portfolio-section .filter-menu button {
+  font-size: 1.8rem;
+  padding: 1rem 2rem;
+  margin: 0.5rem;
+  color: #393939;
+  background-color: #ebc985;
+  border-radius: 0.5rem;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: 0.5s;
+}
+.portfolio-section .filter-menu button:hover {
+  cursor: pointer;
+  box-shadow: inset 0 0.3rem 0.5rem rgb(60 71 97 / 50%);
 }
 
-/* Secondary */
-
-svg.radial-progress:nth-of-type(6n + 2) circle {
-  stroke: #83e4e2;
+.portfolio-section .portfolio-image {
+  width: 100%;
+  height: 25rem;
+}
+.portfolio-section .col:nth-child(3) {
+  margin: 0;
+}
+.portfolio-section .filter-menu button.mixitup-control-active {
+  background-color: #fff;
 }
 
-/* Tertiary */
-
-svg.radial-progress:nth-of-type(6n + 3) circle {
-  stroke: #fd6470;
+/*==============================
+##  TESTIMONIAL SECTION
+================================*/
+.testimonial-section {
+  color: #fff;
+  text-align: center;
+  background: linear-gradient(rgb(215, 70, 128, 0.8), rgba(215, 70, 128, 0.8)),
+    url(./img/testimonial-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.testimonial-section .col:nth-child(1),
+.testimonial-section .col:nth-child(2) {
+  margin-top: 4rem;
+}
+.testimonial-section .col:nth-child(3) {
+  margin-left: 0;
+  margin-top: 8rem;
+}
+.testimonial-section .col:nth-child(4) {
+  margin-top: 8rem;
+}
+.client-photo {
+  width: 10rem;
+  float: left;
+  /* display: flex;
+  flex-wrap: wrap; */
+}
+.client-photo img {
+  height: 8rem;
+  border-radius: 50%;
+  margin-bottom: 3rem;
+}
+.client-review {
+  width: 35rem;
+  float: left;
+}
+.client-review p {
+  font-size: 2.1rem;
+  font-style: italic;
+  line-height: 2rem;
+  margin-bottom: 2rem;
+  display: inline-block;
+}
+.client-review h3 {
+  font-size: 2.4rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+.client-review .role {
+  color: #fd9;
 }
 
-/* Quaternary */
-
-svg.radial-progress:nth-of-type(6n + 4) circle {
-  stroke: #fca858;
+/*==============================
+##  CONTACT SECTION
+================================*/
+.contact-section {
+  color: #fff;
+  text-align: center;
+  background: linear-gradient(rgb(60, 84, 153, 0.8), rgba(60, 84, 153, 0.8)),
+    url(./img/contact-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+.contact-section h2::after {
+  background-color: #273a71;
+}
+.contact-section form {
+  width: 70%;
+  margin-left: 15%;
+  margin-top: 5rem;
+}
+.contact-section input[type="text"],
+.contact-section input[type="email"],
+.contact-section textarea {
+  width: 100%;
+  padding: 1.5rem;
+  border-radius: 0.7rem;
+  border: none;
+  outline: none;
+  font-family: "Titillium Web", sans-serif;
+  background-color: #273a71;
+}
+.contact-section form input::placeholder,
+.contact-section form textarea::placeholder {
+  color: #fff;
+  opacity: 0.5;
+}
+.contact-section form textarea {
+  font-family: "Titillium Web", sans-serif;
+  margin-top: 1rem;
+  max-height: 22rem;
+}
+.btn.btn-submit {
+  background: #17c2a4;
+  border: none;
+  border-bottom: 0.3rem solid #14a58c;
+  transition: all 0.5s ease;
+}
+.btn.btn-submit:hover {
+  cursor: pointer;
+  background-color: #273a71;
+  border-bottom: 0.3rem solid #253669;
 }
 
-/* Quinary */
+/*==============================
+##  FOOTER SECTION
+================================*/
+.footer-section {
+  background: #344b8e;
+  padding: 3rem 0;
+  text-align: center;
+  border-top: 0.1rem solid rgba(255, 255, 255, 0.3);
+}
+.footer-section li {
+  display: inline-block;
+  margin: 0 2rem;
+}
 
-svg.radial-progress:nth-of-type(6n + 5) circle {
-  stroke: #fddc32;
+.footer-section li a:link,
+.footer-section li a:visited,
+.footer-section li a {
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+.footer-section li a:hover {
+}
+.footer-section li a.footer-menu-active {
+  color: #30bae7;
 }

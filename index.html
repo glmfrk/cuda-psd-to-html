@@ -5,6 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cuda - An Awesome Single Page Portfolio Templete</title>
+    <link
+      rel="shortcut icon"
+      href="./resources/images/favicon.png"
+      type="image/x-icon"
+    />
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -21,6 +26,7 @@
     <!-- Vendor Normalize & Grid CSS-->
     <link rel="stylesheet" href="./vendors/css/normalize.css" />
     <link rel="stylesheet" href="./vendors/css/grid.css" />
+    <link rel="stylesheet" href="./vendors/css/animated-circle.css" />
 
     <!-- Custom Style CSS-->
     <link rel="stylesheet" href="./resources/css/style.css" />
@@ -41,12 +47,12 @@
           /></a>
           <ul class="main-nav">
             <li class="active"><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
             <li><a href="#services">Services</a></li>
             <li><a href="#team-members">Team</a></li>
-            <li><a href="#">Work</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#skill">Skill</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#testimonial">Testimonial</a></li>
+            <li><a href="#contact">Contact</a></li>
           </ul>
         </div>
       </nav>
@@ -264,7 +270,11 @@
       </div>
       <div class="row">
         <div class="col span_1_of_4 box">
-          <svg class="radial-progress" data-percentage="82" viewBox="0 0 80 80">
+          <svg
+            class="radial-progress web-design"
+            data-percentage="90"
+            viewBox="0 0 80 80"
+          >
             <circle class="incomplete" cx="40" cy="40" r="35"></circle>
             <circle
               class="complete"
@@ -279,13 +289,17 @@
               y="57%"
               transform="matrix(0, 1, -1, 0, 80, 0)"
             >
-              82%
+              90%
             </text>
           </svg>
           <h3>Web Design</h3>
         </div>
         <div class="col span_1_of_4 box">
-          <svg class="radial-progress" data-percentage="33" viewBox="0 0 80 80">
+          <svg
+            class="radial-progress html-css"
+            data-percentage="75"
+            viewBox="0 0 80 80"
+          >
             <circle class="incomplete" cx="40" cy="40" r="35"></circle>
             <circle
               class="complete"
@@ -300,13 +314,17 @@
               y="57%"
               transform="matrix(0, 1, -1, 0, 80, 0)"
             >
-              33%
+              75%
             </text>
           </svg>
           <h3>HTML / CSS</h3>
         </div>
         <div class="col span_1_of_4 box">
-          <svg class="radial-progress" data-percentage="71" viewBox="0 0 80 80">
+          <svg
+            class="radial-progress graphic"
+            data-percentage="70"
+            viewBox="0 0 80 80"
+          >
             <circle class="incomplete" cx="40" cy="40" r="35"></circle>
             <circle
               class="complete"
@@ -321,13 +339,17 @@
               y="57%"
               transform="matrix(0, 1, -1, 0, 80, 0)"
             >
-              71%
+              70%
             </text>
           </svg>
           <h3>GRAPHIC DESIGN</h3>
         </div>
         <div class="col span_1_of_4 box">
-          <svg class="radial-progress" data-percentage="24" viewBox="0 0 80 80">
+          <svg
+            class="radial-progress ui-ux"
+            data-percentage="85"
+            viewBox="0 0 80 80"
+          >
             <circle class="incomplete" cx="40" cy="40" r="35"></circle>
             <circle
               class="complete"
@@ -342,7 +364,7 @@
               y="57%"
               transform="matrix(0, 1, -1, 0, 80, 0)"
             >
-              24%
+              85%
             </text>
           </svg>
           <h3>Web Design</h3>
@@ -351,14 +373,209 @@
     </section>
     <!-- END SKILL SECTION -->
 
+    <!-- START OUR PORTFOLIO SECTION -->
+    <section id="portfolio" class="portfolio-section">
+      <div class="row">
+        <h2>OUR PORTFOLIO</h2>
+        <p class="little-description">
+          Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet
+          consectetur, adipisci velit, sed quia non numquam
+        </p>
+      </div>
+      <div class="row">
+        <div class="filter-menu">
+          <button type="button" data-filter="all">All</button>
+          <button type="button" data-filter=".app">App</button>
+          <button type="button" data-filter=".web">Web</button>
+          <button type="button" data-filter=".icon">Icon</button>
+        </div>
+      </div>
+      <div class="row container">
+        <div class="col span_1_of_2 box mix all">
+          <img
+            src="./resources/images/portfolio1.png"
+            alt="portfolio1"
+            class="portfolio-image"
+          />
+          <h4>Isometric Perspective Mock-Up</h4>
+        </div>
+        <div class="col span_1_of_2 box mix app">
+          <img
+            src="./resources/images/portfolio2.png"
+            alt="portfolio1"
+            class="portfolio-image"
+          />
+          <h4>Time Zone App UI</h4>
+        </div>
+        <div class="col span_1_of_2 box mix web app">
+          <img
+            src="./resources/images/portfolio3.png"
+            alt="portfolio1"
+            class="portfolio-image"
+          />
+          <h4>Viro Media Players UI</h4>
+        </div>
+        <div class="col span_1_of_2 box mix web icon app">
+          <img
+            src="./resources/images/portfolio4.png"
+            alt="portfolio1"
+            class="portfolio-image"
+          />
+          <h4>Blog / Magazine Flat UI Kit</h4>
+        </div>
+      </div>
+      <!-- HEDDIN LOAD MORE BUTTON -->
+      <!-- <div class="row">
+        <a href="#" class="btn btn-load-more" type="button">
+          LOAD MORE PROJECTS</a
+        >
+      </div> -->
+    </section>
+    <!-- END OUR PORTFOLIO SECTION -->
+
+    <!-- START TESTIMONIAL SECTION -->
+    <section class="testimonial-section" id="testimonial">
+      <div class="row">
+        <h2>WHAT POEPLE SAY ABOUT US</h2>
+        <p class="little-description">Our clients love us!</p>
+      </div>
+      <div class="row">
+        <div class="col span_1_of_2 box">
+          <div class="client-photo">
+            <img src="./resources/images/1.jpg" alt="Chanel Iman" />
+          </div>
+          <div class="client-review">
+            <p>
+              “Nullam dapibus blandit orci, viverra gravida dui lobortis eget.
+              Maecenas fringilla urna eu nisl scelerisque.”
+            </p>
+            <h3>Chanel Iman</h3>
+            <span class="role">CEO of Pinterest</span>
+          </div>
+        </div>
+        <div class="col span_1_of_2 box">
+          <div class="client-photo">
+            <img src="./resources/images/2.jpg" alt="Chanel Iman" />
+          </div>
+          <div class="client-review">
+            <p>
+              “Nullam dapibus blandit orci, viverra gravida dui lobortis eget.
+              Maecenas fringilla urna eu nisl scelerisque.”
+            </p>
+            <h3>Chanel Iman</h3>
+            <span class="role">CEO of Pinterest</span>
+          </div>
+        </div>
+        <div class="col span_1_of_2 box">
+          <div class="client-photo">
+            <img src="./resources/images/3.jpg" alt="Chanel Iman" />
+          </div>
+          <div class="client-review">
+            <p>
+              “Nullam dapibus blandit orci, viverra gravida dui lobortis eget.
+              Maecenas fringilla urna eu nisl scelerisque.”
+            </p>
+            <h3>Chanel Iman</h3>
+            <span class="role">CEO of Pinterest</span>
+          </div>
+        </div>
+        <div class="col span_1_of_2 box">
+          <div class="client-photo">
+            <img src="./resources/images/4.jpg" alt="Chanel Iman" />
+          </div>
+          <div class="client-review">
+            <p>
+              “Nullam dapibus blandit orci, viverra gravida dui lobortis eget.
+              Maecenas fringilla urna eu nisl scelerisque.”
+            </p>
+            <h3>Chanel Iman</h3>
+            <span class="role">CEO of Pinterest</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END TESTIMONIAL SECTION -->
+
+    <!-- START FOOTER CONTACT SECTION -->
+    <section id="contact" class="contact-section">
+      <div class="row">
+        <h2>GET IN TOUCH</h2>
+        <p class="little-description">
+          1600 Pennsylvania Ave NW, Washington, DC 20500, United States of
+          America. Tel: (202) 456-1111
+        </p>
+      </div>
+      <div class="row">
+        <form action="#" method="POST">
+          <div class="row">
+            <div class="col span_1_of_2">
+              <input
+                type="text"
+                name="Name"
+                id="Name"
+                placeholder="Your Name *"
+                required
+              />
+            </div>
+            <div class="col span_1_of_2">
+              <input
+                type="email"
+                name="Name"
+                id="Name"
+                placeholder="example@email.com *"
+                required
+              />
+            </div>
+            <div class="row">
+              <textarea
+                name="message"
+                id="message"
+                cols="70"
+                rows="10"
+                placeholder="Your Message *"
+                required
+              ></textarea>
+            </div>
+            <div class="row">
+              <input
+                class="btn btn-submit"
+                type="submit"
+                value="send message"
+              />
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+    <!-- END FOOTER CONTACT SECTION -->
+
+    <!-- START FOOTER LINK SECTION -->
+    <footer id="footer" class="footer-section">
+      <div class="row">
+        <ul>
+          <li><a href="#"> Facebook </a></li>
+          <li><a href="#" class="footer-menu-active"> Twitter </a></li>
+          <li><a href="#"> Google + </a></li>
+          <li><a href="#"> LinkedIn </a></li>
+          <li><a href="#"> Behance </a></li>
+          <li><a href="#"> Dribbble </a></li>
+          <li><a href="#"> GitHub </a></li>
+        </ul>
+      </div>
+    </footer>
+    <!-- END FOOTER LINK SECTION -->
+
     <!-- Fonts AweSome JS File-->
     <script src="./resources/font awesome/all.min.js"></script>
     <!-- <script src="./resources/font awesome/brands.min.js"></script> -->
 
     <!-- Vendor All JS File-->
+    <script src="./vendors/js/jquery-3.6.0.min.js"></script>
     <script src="./vendors/js/html5shiv.min.js"></script>
     <script src="./vendors/js/respond.min.js"></script>
     <script src="./vendors/js/selectivizr.js"></script>
+    <script src="./vendors/js/animated-circle.js"></script>
+    <script src="./vendors/js/mixitup.min.js"></script>
 
     <!-- Custom JS File-->
     <script src="./resources/scripts js/app.js"></script>
